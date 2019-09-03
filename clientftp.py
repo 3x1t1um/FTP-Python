@@ -50,7 +50,7 @@ def main(ftphost, ftpuser, ftppass):
 
 if __name__ == '__main__':
 	pars = argparse.ArgumentParser()
-	pars.add_argument('host',type=str, help='Set your Host')
+	pars.add_argument('host',type=str, help='Set your FTP Host')
 	pars.add_argument('user',type=str,help='Set your FTP User')
 	pars.add_argument('password',type=str,help='Set your FTP Password')
 	setall = pars.parse_args()
