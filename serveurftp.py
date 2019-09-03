@@ -4,13 +4,13 @@ from pyftpdlib.servers import FTPServer
 import argparse
 
 def connect(host,port,user,password,pathroot):
-    authorizer = DummyAuthorizer()
-    authorizer.add_user(user, password, pathroot, perm="elradfmwMT")
-    authorizer.add_anonymous(".", perm="elradfmwMT")
+    autho = DummyAuthorizer()
+    autho.add_user(user, password, pathroot, perm="elradfmwMT")
+    autho.add_anonymous(".", perm="elradfmwMT")
     handler = FTPHandler
-    handler.authorizer = authorizer
-    server = FTPServer((host, port), handler)
-    server.serve_forever()
+    handler.authorizer = autho
+    serv = FTPServer((host, port), handler)
+    serv.serve_forever()
 
 
 if __name__ == '__main__':
