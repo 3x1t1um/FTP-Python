@@ -1,10 +1,8 @@
 #-*- coding:utf-8 -*-
-"""
-By 3x1t1um
 
-ftp client
+#By 3x1t1um
 
-"""
+#ftp client v1
 
 import os
 from ftplib import FTP
