@@ -19,6 +19,6 @@ if __name__ == '__main__':
 	pars.add_argument('port',type=str,help='Set your FTP Port')
 	pars.add_argument('user',type=str,help='Set your FTP User')
 	pars.add_argument('password',type=str,help='Set your FTP Password')
-	pars.add_argument('pathroot',type=str,help='Set your FTP Password')
+	pars.add_argument('pathroot',type=str,help='Set your FTP path root')
 	setall = pars.parse_args()
 	connect(setall.host, setall.port, setall.user, setall.password, setall.pathroot)
